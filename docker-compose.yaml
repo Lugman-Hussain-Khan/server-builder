@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  server:
+    build: .
+    container_name: qlikinit
+    image: lugmanhk/qlikinit:0.0.1
+    ports:
+      - "80:3000"
+      - "443:443"
+    environment:
+      - DATABASE_URL=postgresql://resorucemanager:ijbe873279has112ds@common-svc-db.c8sevart4re3.ap-south-1.rds.amazonaws.com/resorucemanager
+      - YOUTRACK_TOKEN=perm:TG9rZXNoLnJhdmljaGFuZHJ1.NjctMQ==.xSEONwR1B8EjoJKdDXonEorx4mrPbA
